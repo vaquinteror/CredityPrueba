@@ -1,0 +1,37 @@
+se realiza codigo por compliador online no carga por la canitdad de datos
+
+
+import math
+
+def combination(n, r):
+    return int((math.factorial(n)) / ((math.factorial(r)) * math.factorial(n - r)))
+
+def for_test(x, y): 
+    for y in range(x):
+        return combination(x, y)
+
+def pascals_triangle(rows):
+    result = [] 
+    for count in range(rows): 
+        row = []
+        contador = 0
+        for element in range(count + 1): 
+            
+            row.append(combination(count, element))
+            result.append(row)
+                     
+            
+        print (element)
+        
+        #if (element)%7 == 1:
+        #    contador+= 1
+        #    print("Total de numeros no divisibles es : ", contador)  #"esto es para contar la cantidad de elementos no divisbles  "
+        #else:
+        #    contador= contador + 0
+    return result
+    
+    
+
+for row in pascals_triangle(10**9):
+    print(row)
+    
